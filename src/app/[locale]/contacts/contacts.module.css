@@ -1,0 +1,215 @@
+.contacts_container{
+    margin-top: -140px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0;
+  margin-bottom: 120px;
+}
+
+.item {
+  flex: 1 1 250px;
+  max-width: 90%;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.item p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.item_title{
+    font-weight: 600;
+}
+
+.tel, .email, .address {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.details {
+  flex: 1 1 300px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.map {
+  width: 100vw;
+  height: 600px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  position: relative;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+}
+
+.contactSection {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-family: 'Arial', sans-serif;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+ 
+}
+
+.form label{
+    font-size: 1.5rem;
+}
+
+.row label {
+ width: calc((100% - 16px) / 2);
+}
+
+.input {
+  display: block;
+  /* flex: 1 1 50%; */
+  width: 100%;
+  min-width: 250px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+    margin-top: 8px;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 120px;
+  resize: vertical;
+  margin-top: 8px;
+}
+
+.button {
+  min-width: 350px;
+  font-size: 20px;
+  align-self: center;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+@media screen and (max-width: 1140px){
+.list {
+  gap: 20px;
+}
+.item {
+  max-width: 100%;
+  padding: 20px 20px;
+}
+}
+
+@media screen and (max-width: 1024px){
+.list {
+  gap: 40px;
+}
+.item {
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+@media screen and (max-width: 764px){
+.title {
+  font-size: 26px;
+}
+
+.row{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.row input{
+  margin-bottom: 10px;
+}
+
+
+}
+
+@media screen and (max-width: 500px){
+.button {
+  min-width: 100%;
+}
+}
+
+@media screen and (max-width: 360px){
+  .title {
+  font-size: 22px;
+}
+.item p {
+  font-size: 16px;
+}
+}

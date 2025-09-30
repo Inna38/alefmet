@@ -1,0 +1,437 @@
+.swiperContainer {
+  width: 100%;
+  max-width: 500px; /* или нужный размер */
+  height: auto;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productPage {
+  display: flex;
+  gap: 2rem;
+
+    margin-top: -160px;
+  margin-bottom: 90px;
+}
+
+.imageSection {
+  flex: 1;
+}
+
+.infoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.shortDescription {
+  font-family: 'Inter', sans-serif;
+      font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4em;
+  margin: 3rem 0;
+  color: #666;
+}
+
+/* .priceBox {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+} */
+
+/* .price {
+  font-size: 1.5rem;
+  color: #ff3b30;
+  font-weight: bold;
+} */
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.actions a {
+width: 60%;
+}
+
+.select {
+  padding: 0.5rem;
+}
+
+.addToCart {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.section:last-child {
+  margin-bottom: 90px;
+}
+
+.section h2{
+      font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    /* font-weight: bold; */
+      /* background: #f9f9f9; */
+      text-align: center;
+      border-radius: 8px;
+      padding: 20px;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* font-family: 'Inter', sans-serif; */
+  font-size: 17px;
+  line-height: 1.6em;
+
+  color: #333;
+}
+
+.cardList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+   font-size: 22px;
+  /* background: #f9f9f9; */
+  padding: 8px 18px;
+  border-radius: 12px;
+  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+}
+
+.cardList li div strong{
+   font-size: 22px;
+   font-weight: 600;
+}
+
+.cardList li div{
+     font-size: 20px;    
+}
+
+/* .cardList li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+} */
+
+/* .icon {
+  font-size: 20px;
+  flex-shrink: 0;
+} */
+
+@media screen and (max-width: 1100px) {
+.actions a {
+width: 70%;
+font-size: 18px;
+}
+}
+
+@media screen and (max-width: 1000px) {
+  .productPage {
+  gap: 0rem;
+}
+
+.imageSection img {
+width: 450px;
+}
+}
+
+@media screen and (max-width: 955px) {
+.productPage:first-child{
+  flex-direction: column;
+  margin-top: -120px;
+  margin-bottom: 60px;
+}
+
+.actions a {
+width: 40%;
+font-size: 18px;
+}
+
+.cardList li div{
+
+     line-height: 1.6; 
+}
+
+    .cardList li {
+  padding: 6px 0;
+
+}
+
+.imageSection img {
+width: 500px;
+margin-bottom: 40px;
+}
+
+.title{
+  display: none;
+}
+.shortDescription {
+      margin-top: 0;
+      
+}
+}
+
+@media (max-width: 882px) {
+    .section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 840px){
+  .actions a {
+width: 320px;
+height: 60px !important;
+}
+}
+
+@media (max-width: 768px) {
+      .cardList {
+  margin: 0px;
+
+}
+    .cardList li {
+  gap: 12px;
+   font-size: 22px;
+
+  padding: 6px 0;
+
+}
+
+.cardList li div strong{
+   font-weight: 600;
+}
+
+
+
+.shortDescription {
+      font-size: 22px;
+}
+}
+
+@media screen and (max-width: 764px) {
+.productPage:first-child{
+  margin-top: -100px;
+}
+}
+
+@media (max-width: 500px) {
+  .shortDescription {
+      font-size: 20px;
+}
+
+    .cardList li {
+  gap: 12px;
+   font-size: 22px;
+
+}
+
+.cardList li div strong{
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.cardList li div{
+     font-size: 18px;   
+     line-height: 1.6; 
+}
+  .actions a {
+width: 100%;
+}
+}
+
+@media (max-width: 440px) {
+.imageSection img {
+height: 330px;
+}
+
+}
+
+
+/* .card {
+  max-width: 80%;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  margin: 0 auto;
+  margin-top: -160px;
+  margin-bottom: 90px;
+}
+
+.title {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: #003366;
+  text-align: center;
+} */
+
+/* .imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+} */
+
+/* .imageWrapper {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+
+.imageWrapper img{
+width: 100%;
+height: 380px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.description {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+  color: var(--accent-color);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 10px;
+}
+
+.featureList {
+
+  list-style: none;
+  padding-left: 0;
+}
+
+.featureList > li > strong{
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.featureList > li {
+ font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.subList {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+.subList > li {
+ font-size: 2rem;
+}
+
+.bulletList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bulletList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--hero-color);
+  color:  var(--accent-color);
+}
+
+@media screen and (max-width: 1024px) {
+ .imageWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 950px) {
+  .card{
+    margin-top: -120px;
+   }
+}
+
+@media screen and (max-width:765px) {
+  .card{
+  margin-top: -100px;
+ }
+ .imageWrapper {
+  width: 100%;
+}
+ .imageWrapper img{
+    width: 100%;
+   }
+}
+
+@media screen and (max-width:740px) {
+ .table th,
+ .table td {
+  font-size: 2rem;
+}
+
+}
+
+@media screen and (max-width:540px) {
+.card {
+  max-width: 100%;
+}
+}
+
+@media (max-width: 380px){
+.imageWrapper {
+  height: 300px;
+}
+
+.imageWrapper img{
+height: 250px;
+}
+} */

@@ -1,0 +1,181 @@
+.footer {
+  background-color: var(--hero-color);
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 200px;
+height: 50px;
+}
+
+.column h4 {
+  font-size: 15px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  color: #ffaa00;
+}
+
+.column_info{
+  max-width: 280px;
+}
+
+.column_social{
+  margin-top: 20px;
+}
+
+.about {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.nav li {
+  margin-bottom: 13px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent-hover-color);
+}
+
+.nav{
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+}
+
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.bottom p{
+  font-size: 20px;
+}
+
+.work_container{
+  display: flex;
+  align-items: center;
+  text-align: center;   
+  max-width: 300px;     
+  margin-top: 40px;
+}
+
+.work_container img{
+  margin-right: 12px;
+}
+
+.work_container span{
+  display: inline-block;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  font-size: 19px;
+  color: var(--secondary-color);
+}
+
+.item{
+ color: var(--secondary-color);
+}
+
+.item a {
+ font-size: 22px;
+ margin-top: 5px;
+ margin-right: 4px;
+}
+
+.contact{
+  display: flex;
+  transition: color 0.3s ease;
+}
+
+.contact img {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.contact:hover {
+  color: var(--accent-hover-color);
+}
+
+.active{
+  color: var(--accent-color);
+} 
+
+/* === Responsive (Mobile) === */
+@media (max-width: 1024px) {
+ .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo{
+   margin: center;
+}
+
+  .nav {
+    align-items: center;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .work_container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .work_container img {
+    margin-bottom: 8px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .column h4 {
+    margin-top: 20px;
+  }
+
+  .navigation h4{
+    margin-top: 50px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .item a  {
+    font-size: 18px;
+  }
+
+  .bottom p{
+  font-size: 16px;
+}
+}

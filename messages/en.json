@@ -1,0 +1,28 @@
+{
+  "banner_content": "Your #1 choice for large-scale orders — economical, high-quality, on time",
+  "nav": {
+    "home": "Home",
+    "production": "Production",
+    "products": "Products",
+    "quality": "Quality",
+    "contacts": "Contacts",
+    "language": "Language"
+  },
+  "about": {
+    "title": "Our metal works all over the world",
+    "export": "Export to Asian and European countries"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "tel": "Call Us",
+    "email": "Write to Us",
+    "address_title": "Address",
+    "address": "vul. Korolenka, Kamyansk, Dnipropetrovsk region",
+    "sendMessage": "Leave a message",
+    "titleMessage": "Want to know more or place an order? Leave a message — we’ll get back to you.",
+    "emailAddress": "Your email address",
+    "telMessage": "Phone / Whatsapp",
+    "message": "Your message",
+    "send": "Send"
+  }
+}
