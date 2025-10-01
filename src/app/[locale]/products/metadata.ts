@@ -1,13 +1,15 @@
 import { Metadata } from "next";
 
+export type paramsType = Promise<{ locale: string; slug: string }>;
+
 type Props = {
-  params: { locale: "ua" | "en" };
+  params: paramsType;
 };
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const locale = params.locale;
+  const { locale } = await params;
 
   const title =
     locale === "en"

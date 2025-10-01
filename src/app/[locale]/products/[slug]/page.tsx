@@ -1,18 +1,17 @@
-import Image from "next/image";
-import { products } from "../../../../../public/json_products/json";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import ProductCard from "@/components/ProductCard/ProductCard";
+import { products } from "../../../../../public/json_products/json";
 
-// export async function generateStaticParams() {
-//   return products.map((product) => ({ slug: product.slug }));
-// }
 
-import { generateMetadata } from "./metadata";
+import type { Metadata } from "next";
+import type { AppProps } from "next/app";
 
-export { generateMetadata };
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
+
 
 export async function generateStaticParams() {
-  const locales = ["ua", "en"]; 
-
+  const locales = ["ua", "en"] as const; 
   return products.flatMap((product) =>
     locales.map((locale) => ({
       locale,
@@ -21,13 +20,54 @@ export async function generateStaticParams() {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ProductDetails({ params }: { params: any }) {
-   const { slug } = params;    
-    
+export type paramsType = Promise<{ locale: string; slug: string }>;
+
+type Props = {
+  params: paramsType;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug, locale } = await params;
+
+  const product = products.find((p) => p.slug === slug);
+  if (!product) {
+    return {
+      title: locale === "en" ? "Product not found" : "Продукт не знайдено",
+    };
+  }
+
+  const title =
+    locale === "en"
+      ? `${product.titleEn} — Aluminum Alloy`
+      : `${product.titleUa} — Алюмінієвий сплав`;
+
+  const description =
+    locale === "en" ? product.descriptionEn : product.descriptionUa;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/products/${slug}`,
+      languages: {
+        "uk-UA": `${BASE_URL}/ua/products/${slug}`,
+        "en-US": `${BASE_URL}/en/products/${slug}`,
+      },
+    },
+    openGraph: { title, description, type: "website" },
+    icons: { icon: "/fav.png" },
+  };
+}
+
+
+export default async function ProductDetails ({ params }: Props) {
+  const { slug, locale } = await params;
   const product = products.find((p) => p.slug === slug);
 
-  if (!product) return <div>Продукт не знайдено</div>;
+  if (!product)
+    return (
+      <div>{locale === "en" ? "Product not found" : "Продукт не знайдено"}</div>
+    );
 
-   return <ProductCard productProps={product} />;
+  return <ProductCard productProps={product} />;
 }
