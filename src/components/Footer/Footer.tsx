@@ -14,7 +14,7 @@ import time from "../../../public/10723279.png";
 import telegram from "../../../public/social/Telegram_2019_Logo.svg.webp";
 import whatsapp from "../../../public/social/png-transparent-whatsapp-icon-whatsapp-computer-icons-symbol-text-messaging-whats-logo-grass-mobile-phones.png";
 import viber from "../../../public/social/3938039.png";
-import logo from "../../../public/logo.svg";
+import logo from "../../../public/logo.png";
 
 
 const Footer = () => {
@@ -31,8 +31,8 @@ const Footer = () => {
             <Image
               src={logo}
               alt="logo"
-              width={30}
-              height={30}
+              // width={30}
+              // height={30}
               className={styles.logo}
             />
             {/* <p className={styles.about}>

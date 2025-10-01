@@ -20,18 +20,18 @@ L.Icon.Default.mergeOptions({
 export default function Map() {
   return (
     <MapContainer
-      center={[50.4501, 30.5234]} // Киев, координаты
+      center={[48.467388, 34.651945]} // координаты
       zoom={13}
-      style={{ height: "400px", width: "100%" }}
+      style={{ height: "500px", width: "100%" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&copy; OpenStreetMap contributors"
+        // attribution="&copy; OpenStreetMap contributors"
       />
-      <Marker position={[50.4501, 30.5234]}>
-        <Popup>
-          Ми тут! <br /> Наш офіс у Києві.
-        </Popup>
+      <Marker position={[48.467388, 34.651945]}>
+        {/* <Popup>
+          Ми тут! <br />
+        </Popup> */}
       </Marker>
     </MapContainer>
   );

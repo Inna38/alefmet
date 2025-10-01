@@ -6,7 +6,8 @@
     "products": "Products",
     "quality": "Quality",
     "contacts": "Contacts",
-    "language": "Language"
+    "language": "Language",
+    "address": "3rd Travnevyi Lane, Kamianske, Dnipropetrovsk Oblast"
   },
   "about": {
     "title": "Our metal works all over the world",
@@ -17,7 +18,7 @@
     "tel": "Call Us",
     "email": "Write to Us",
     "address_title": "Address",
-    "address": "vul. Korolenka, Kamyansk, Dnipropetrovsk region",
+    "address": "3rd Travnevyi Lane, Kamianske, Dnipropetrovsk Oblast",
     "sendMessage": "Leave a message",
     "titleMessage": "Want to know more or place an order? Leave a message — we’ll get back to you.",
     "emailAddress": "Your email address",

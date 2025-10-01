@@ -16,9 +16,11 @@ import { useLocale } from "next-intl";
 
 interface Product {
   img: string[] | StaticImageData[] | [];
-  title: string;
+  titleUa: string;
+  titleEn: string;
   slug: string;
-  description?: string;
+  descriptionUa?: string;
+  descriptionEn?: string;
   specs?: Record<string, string>;
   features?: Record<string, string | string[] | undefined>;
   advantages?: string[];
@@ -26,8 +28,17 @@ interface Product {
 };
 
 export default function ProductCard({ productProps }: { productProps: Product }) {
-  const { img, title, description, specs, features, advantages, applications } =
-    productProps;
+  const {
+    img,
+    titleUa,
+    titleEn,
+    descriptionUa,
+    descriptionEn,
+    specs,
+    features,
+    advantages,
+    applications,
+  } = productProps;
   const locale = useLocale();
   
   return (
@@ -53,7 +64,7 @@ export default function ProductCard({ productProps }: { productProps: Product })
               <SwiperSlide key={index} className={styles.swiperSlide}>
                 <Image
                   src={src}
-                  alt={`${title} ${index + 1}`}
+                  alt={`product ${index + 1}`}
                   width={500}
                   height={400}
                   className={styles.productImage}
@@ -65,8 +76,12 @@ export default function ProductCard({ productProps }: { productProps: Product })
 
         {/* Права частина - інформація */}
         <div className={styles.infoSection}>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.shortDescription}>{description}</p>
+          <h1 className={styles.title}>
+            {locale === "ua" ? titleUa : titleEn}
+          </h1>
+          <p className={styles.shortDescription}>
+            {locale === "ua" ? descriptionUa : descriptionEn}
+          </p>
 
           {/* <div className={styles.priceBox}>
             <span className={styles.price}>$450.00 USD</span>

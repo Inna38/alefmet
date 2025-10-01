@@ -11,7 +11,7 @@ import viber from "../../../public/social/3938039.png";
 import address from "../../../public/ico_address.png";
 import burger from "../../../public/burger.png";
 import burger_close from "../../../public/burger_close.png";
-import logo from "../../../public/logo.svg";
+import logo from "../../../public/logo.png";
 import styles from "./infoSection.module.css"
 import Container from "../Container/Container";
 import { useWindowWidth } from "@/hooks/useWindowWidth.tsx";
@@ -77,7 +77,7 @@ useEffect(() => {
                 <Image
                   src={burger}
                   alt="menu_burger"
-                  width={35}
+                  width={45}
                   height={35}
                   className={styles.burger}
                   onClick={() => setBurgerMenu((prev) => !prev)}
@@ -88,8 +88,8 @@ useEffect(() => {
                 <Image
                   src={logo}
                   alt="logo"
-                  width={30}
-                  height={30}
+                  // width={30}
+                  // height={30}
                   className={styles.logo}
                 />
                 {/* <Image
@@ -236,9 +236,7 @@ useEffect(() => {
                         width={30}
                         height={35}
                       />
-                      <p>
-                        вул. Короленка, Кам’янське, Дніпропетровська область
-                      </p>
+                      <p>{t("address")}</p>
                     </a>
                   </li>
 

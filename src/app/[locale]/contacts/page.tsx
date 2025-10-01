@@ -11,13 +11,13 @@ import address from "../../../../public/ico_address.png";
 import { useTranslations } from 'next-intl';
 
 // Динамически подключаем карту, чтобы отключить SSR
-const Map = dynamic(() => import("../../../components/GoogleMap/GoogleMap"), {
-  ssr: false,
-});
-
-// const Map = dynamic(() => import("../../../components/Map/Map"), {
-//   ssr: false, 
+// const Map = dynamic(() => import("../../../components/GoogleMap/GoogleMap"), {
+//   ssr: false,
 // });
+
+const Map = dynamic(() => import("../../../components/Map/Map"), {
+  ssr: false, 
+});
 
 const Contacts = () => {
   const t = useTranslations("contact"); 

@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 import Image from 'next/image';
 import Link from "next/link";
 import React, { useState } from 'react'
-import logo from "../../../public/logo.svg"
+import logo from "../../../public/logo.png";
 import styles from "./header.module.css"
 import Container from '../Container/Container';
 import { useWindowWidth } from '@/hooks/useWindowWidth.tsx';
@@ -31,8 +31,8 @@ const pathname = usePathname();
               <Image
                 src={logo}
                 alt="logo"
-                width={30}
-                height={30}
+                // width={30}
+                // height={30}
                 className={styles.logo}
               />
             </div>

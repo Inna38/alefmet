@@ -6,6 +6,10 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 //   return products.map((product) => ({ slug: product.slug }));
 // }
 
+import { generateMetadata } from "./metadata";
+
+export { generateMetadata };
+
 export async function generateStaticParams() {
   const locales = ["ua", "en"]; 
 
