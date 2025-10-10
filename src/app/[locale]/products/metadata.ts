@@ -26,7 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    icons: { icon: "/fav.png" },
+    icons: [
+      {
+        url: "/fav.png",
+        type: "image/png",
+      },
+    ],
     alternates: {
       canonical,
       languages: {

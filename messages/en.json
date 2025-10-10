@@ -1,5 +1,6 @@
 {
   "banner_content": "Your #1 choice for large-scale orders — economical, high-quality, on time",
+  "banner_title": "Reliable aluminum for business",
   "nav": {
     "home": "Home",
     "production": "Production",
@@ -10,8 +11,46 @@
     "address": "3rd Travnevyi Lane, Kamianske, Dnipropetrovsk Oblast"
   },
   "about": {
+    "heroTitle": "Comprehensive turnkey aluminum supply solutions",
+    "heroDescription": "Alefmet LLC is a modern enterprise specializing in the production of secondary aluminium alloys for industrial use. We offer a full range of services, from manufacturing aluminium alloys to delivering them to your facility. Our goal is to provide you with reliability, precision, and time savings at every stage.",
+    "listName": "Why Choose Us?",
+
+    "listTitle_1": "Experience and Expertise",
+    "listDescr_1": "Many years of experience in the metallurgy industry and a team of highly qualified specialists allow us to find optimal solutions for the most complex tasks.",
+
+    "listTitle_2": "Reliable Supply",
+    "listDescr_2": "We guarantee stability of supply and fulfillment of obligations thanks to capacities that allow production of over 500 tons of aluminium per month.",
+
+    "listTitle_3": "Individual Approach",
+    "listDescr_3": "We provide flexible solutions that fully meet your unique requirements. Your individual drawings and specifications are our priority.",
+
+    "listTitle_4": "Compliance with Standards",
+    "listDescr_4": "Our products meet international quality standards EN, ISO, ASTM, ensuring reliable chemical composition and timely delivery.",
+
+    "listName_2": "Our Products and Services",
+
+    "btnProduct": "Products",
+    "btnContact": "Contact",
+
     "title": "Our metal works all over the world",
     "export": "Export to Asian and European countries"
+  },
+  "production": {
+    "title": "Our Production",
+    "descr": "Modern technologies, process automation, and quality control at every stage.",
+    "videoContent_1": "Our production combines the most advanced technologies with years of experience in metallurgy. We control every step, from raw material preparation to casting the finished products.",
+    "videoContent_2": "We don’t just create metal – we provide you with reliability, precision, and time savings.",
+    "listTitle_1": "Production Stages",
+    "listDescr_1": "From spark to perfection: each stage of aluminium ingot production is an art of metal transformation. We combine traditional craftsmanship with innovative technologies to ensure flawless quality and reliability for your business.",
+    "listTitle_2": "Precision in Every Alloy: Our Laboratory",
+    "listDescr_2": "The heart of our quality control is a portable spectrometer. This is not just an instrument but the key to uncompromising purity. Every aluminium sample undergoes rapid analysis, instantly confirming its chemical composition.",
+    "listDescr_2_2": "This technology allows us to track impurities and alloying elements with high accuracy, ensuring that every alloy meets the strictest EN, ISO, and ASTM standards.",
+    "listTitle_3": "Delivery and Logistics",
+    "listDescr_3": "Finished products: loading and shipment. Our capacities allow production of over 500 tons of aluminium per month, ensuring stability and reliability of supply. We deliver metal worldwide, confirming our status as a global partner.",
+    "listTitle_4": "Need a Reliable Business Partner?",
+    "listDescr_4": "We combine experience, technology, and an individual approach to ensure your business succeeds.",
+    "btnProduct": "Products",
+    "btnContact": "Contact"
   },
   "contact": {
     "title": "Contact Us",

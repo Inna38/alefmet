@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Geist, Geist_Mono, Russo_One, Tektur } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Montserrat,
+  Tektur,
+} from "next/font/google";
 import { Manrope } from "next/font/google";
 
 import "../globals.css";
@@ -23,22 +28,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 const tektur = Tektur({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
   variable: "--font-tektur",
 });
-// const russoOne = Russo_One({
-//   weight: "400",
-//   subsets: ["cyrillic", "latin"], // щоб підтримувалась українська мова
-//   display: "swap",
-// });
 
 const monoton = Monoton({
-  weight: "400", 
-  subsets: ["latin"], 
+  weight: "400",
+  subsets: ["latin"],
 });
 
 const manrope = Manrope({
@@ -47,22 +46,33 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
 
 type Props = {
   children: React.ReactNode;
- params: { locale: "ua" | "en" };
+  params: { locale: "ua" | "en" };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  if (params.locale === "en") {
+  const { locale } = await params;
+
+  if (locale === "en") {
     return {
       title: "Alefmet. Aluminum Production and Sales | Alloys and Granules",
       description:
         "Buy aluminum and alloys. Production and sales of aluminum granules, ingots, and casting alloys: ADC12, AK12, EN AB-47100, EN AB-46000. High quality and delivery across Ukraine and Europe.",
-      icons: {
-        icon: "/fav.png",
-      },
+      icons: [
+        {
+          url: "/fav.png",
+          type: "image/png",
+        },
+      ],
       alternates: {
         canonical: `${BASE_URL}/en`,
         languages: {
@@ -73,14 +83,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // по умолчанию — украинский
   return {
-    title: "Алефмет. Виробництво та продаж алюмінію | Алюмінієві сплави та гранули",
+    title:
+      "Алефмет. Виробництво та продаж алюмінію | Алюмінієві сплави та гранули",
     description:
       "Купити алюміній та сплави. Виробництво і продаж алюмінієвих гранул, злитків та литих сплавів: ADC12, AK12, EN AB-47100, EN AB-46000. Висока якість та доставка по Україні та Європі.",
-    icons: {
-      icon: "/fav.png",
-    },
+    icons: [
+      {
+        url: "/fav.png",
+        type: "image/png",
+      },
+    ],
     alternates: {
       canonical: `${BASE_URL}/ua`,
       languages: {
@@ -91,7 +104,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-
 export default async function RootLayout({
   children,
   params,
@@ -99,8 +111,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  // Ensure that the incoming `locale` is valid
-  const { locale } = params;
+
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -109,7 +121,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${tektur.className} ${manrope.className} ${monoton.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${tektur.className} ${manrope.className} ${monoton.className} ${montserrat.className} antialiased`}
       >
         <NextIntlClientProvider locale={locale}>
           <InfoSection />

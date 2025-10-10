@@ -1,17 +1,12 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// фикс для иконок маркера, иначе они могут не отображаться
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
-import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-import iconUrl from "leaflet/dist/images/marker-icon.png";
-import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 
 
 L.Icon.Default.mergeOptions({
@@ -32,9 +27,6 @@ export default function Map() {
         // attribution="&copy; OpenStreetMap contributors"
       />
       <Marker position={[48.467388, 34.651945]}>
-        {/* <Popup>
-          Ми тут! <br />
-        </Popup> */}
       </Marker>
     </MapContainer>
   );

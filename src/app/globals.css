@@ -2,11 +2,15 @@
   --font-onest: "Onest", sans-serif;
   --font-bitter: "Bitter", sans-serif;
 
-  --hero-color:  #1a1a1a;
+  --hero-color: #1a1a1a;
   --secondary-color: #ffffff;
   --accent-color: #fca31e;
-  --accent-hover-color: #c97b05;
-  --accent-text-color: #e63946;
+  /* --accent-hover-color: #e96b62; */
+  /* --accent-hover-color: linear-gradient(90deg, #1a1a1a, #fca31e, #6b6b6b); */
+  /* --accent-hover-color: linear-gradient(90deg, #8a5c00, #d97706, #fca31e); */
+  --accent-hover-color: linear-gradient(90deg, #a3a3a3, #fca31e, #f79401,#8f8e8e);
+  --accent-form-color: #fca31e99; 
+  --accent-text-color: #eb2d3d;
   --border-color: #e0e0e0;
 }
 
@@ -33,7 +37,6 @@ body {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -70,13 +73,47 @@ svg {
 }
 
 input,
-button,
 textarea,
 select {
   font: inherit;
+  border-color: none;
 }
 
-button{
+input,
+textarea,
+select{
+  display: inline-block;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button {
+  font: inherit;
   background-color: transparent;
   border: none;
   cursor: pointer;

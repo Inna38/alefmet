@@ -31,15 +31,8 @@ const Footer = () => {
             <Image
               src={logo}
               alt="logo"
-              // width={30}
-              // height={30}
               className={styles.logo}
             />
-            {/* <p className={styles.about}>
-              {locale === "ua"
-                ? "Металообробка та виробництво на замовлення"
-                : "Metalworking & custom production"}
-            </p> */}
             <div className={styles.work_container}>
               <Image src={time} alt="time" width={40} height={40} />
               {locale === "ua" ? (
@@ -141,16 +134,6 @@ const Footer = () => {
                     }`}
                   >
                     {t("products")}
-                  </Link>
-                </li>
-                <li className={styles.item}>
-                  <Link
-                    href={`/${locale}/quality`}
-                    className={`${
-                      pathname === `/${locale}/quality` ? styles.active : ""
-                    }`}
-                  >
-                    {t("quality")}
                   </Link>
                 </li>
                 <li className={styles.item}>

@@ -1,26 +1,19 @@
-'use client'
+"use client";
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from 'react'
+import React from "react";
 import logo from "../../../public/logo.png";
-import styles from "./header.module.css"
-import Container from '../Container/Container';
-import { useWindowWidth } from '@/hooks/useWindowWidth.tsx';
-import BannerSection from '../BannerSection/BannerSection';
-import { usePathname } from 'next/navigation';
-
+import styles from "./header.module.css";
+import Container from "../Container/Container";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const width = useWindowWidth()
-
   const t = useTranslations("nav");
-  
   const locale = useLocale();
-const pathname = usePathname();
-
+  const pathname = usePathname();
 
   return (
     <>
@@ -31,8 +24,6 @@ const pathname = usePathname();
               <Image
                 src={logo}
                 alt="logo"
-                // width={30}
-                // height={30}
                 className={styles.logo}
               />
             </div>
@@ -68,16 +59,6 @@ const pathname = usePathname();
                     {t("products")}
                   </Link>
                 </li>
-                {/* <li className={styles.item}>
-                  <Link
-                    href={`/${locale}/quality`}
-                    className={`${
-                      pathname === `/${locale}/quality` ? styles.active : ""
-                    }`}
-                  >
-                    {t("quality")}
-                  </Link>
-                </li> */}
                 <li className={styles.item}>
                   <Link
                     href={`/${locale}/contacts`}
@@ -95,6 +76,6 @@ const pathname = usePathname();
       </header>
     </>
   );
-}
+};
 
-export default Header
+export default Header;

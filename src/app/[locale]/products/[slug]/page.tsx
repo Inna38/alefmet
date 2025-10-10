@@ -1,17 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import ProductCard from "@/components/ProductCard/ProductCard";
 import { products } from "../../../../../public/json_products/json";
 
-
 import type { Metadata } from "next";
-import type { AppProps } from "next/app";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
 
-
 export async function generateStaticParams() {
-  const locales = ["ua", "en"] as const; 
+  const locales = ["ua", "en"] as const;
   return products.flatMap((product) =>
     locales.map((locale) => ({
       locale,
@@ -55,12 +50,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: { title, description, type: "website" },
-    icons: { icon: "/fav.png" },
+    icons: [
+      {
+        url: "/fav.png",
+        type: "image/png",
+      },
+    ],
   };
 }
 
-
-export default async function ProductDetails ({ params }: Props) {
+export default async function ProductDetails({ params }: Props) {
   const { slug, locale } = await params;
   const product = products.find((p) => p.slug === slug);
 

@@ -63,9 +63,6 @@ export default function ClientProductsPage() {
                 >
                   {local === "ua" ? titleUa : titleEn}
                 </p>
-                {/* <p className={styles.itemDescr}>
-                  Lorem ipsum dolor sit amet consectetur lacus purus tincidunt.
-                </p> */}
                 <Link
                   href={`/${local}/products/${slug}`}
                   className={styles.button}
@@ -91,58 +88,5 @@ export default function ClientProductsPage() {
         </div>
       )}
     </div>
-    // <div className={styles.productsPage_container}>
-    //   <Container>
-    //     <ul className={styles.list}>
-    //       {products.map(({ img, title, slug }) => (
-    //         <li key={title} className={styles.item}>
-    //           <div
-    //             className={styles.imageWrapper}
-    //             onClick={() => handleImageClick(img as unknown as string)}
-    //           >
-    //             <Image
-    //               src={img[0]}
-    //               alt={title}
-    //               width={300}
-    //               height={300}
-    //               className={styles.img}
-    //             />
-    //             <div className={styles.zoomIcon}>
-    //               <Image
-    //                 src={zoom}
-    //                 alt="zoom"
-    //                 width={20}
-    //                 height={20}
-    //                 className={styles.img}
-    //               />
-    //             </div>
-    //             {/* <div className={styles.tooltip}>Нажмите для увеличения</div> */}
-    //           </div>
-
-    //           <div className={styles.info}>
-    //             <p className={styles.item_descr}>{title}</p>
-    //             <Link
-    //               href={`/${local}/products/${slug}`}
-    //               className={styles.button}
-    //             >
-    //               {local === "ua" ? "Детальніше" : "More details"}
-    //             </Link>
-    //           </div>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </Container>
-    //   {isOpen && activeImage && (
-    //     <div className={styles.modalOverlay} onClick={closeModal}>
-    //       <Image
-    //         src={activeImage[0]}
-    //         alt="Zoomed image"
-    //         width={800}
-    //         height={800}
-    //         className={styles.modalImage}
-    //       />
-    //     </div>
-    //   )}
-    // </div>
   );
 }

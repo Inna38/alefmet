@@ -1,27 +1,107 @@
-'use client';
+"use client";
 
-import React from 'react'
+import React from "react";
 import dynamic from "next/dynamic";
 import styles from "./contacts.module.css";
-import Container from '@/components/Container/Container';
-import Image from 'next/image';
-import phone from "../../../../public/icon-phone-illustration.png";
-import email from "../../../../public/icon-email-illustratio.png";
-import address from "../../../../public/ico_address.png";
-import { useTranslations } from 'next-intl';
+import Container from "@/components/Container/Container";
+import Image from "next/image";
+import phone from "../../../../public/phone.png";
+import email from "../../../../public/email.png";
+import address from "../../../../public/address.png";
+import { useTranslations } from "next-intl";
+import { Metadata } from "next";
 
 // Динамически подключаем карту, чтобы отключить SSR
 // const Map = dynamic(() => import("../../../components/GoogleMap/GoogleMap"), {
 //   ssr: false,
 // });
 
+// const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
+
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const { locale } = params;
+
+//   if (locale === "en") {
+//     return {
+//       title: "Contacts | Alefmet — Aluminum Production and Sales",
+//       description:
+//         "Contact Alefmet: aluminum alloy supplier in Ukraine and Europe. Call us or email to get a quote for aluminum ingots, granules, or casting alloys.",
+//       keywords:
+//         "Alefmet contacts, aluminum supplier, Ukraine, aluminum alloys, granules, ingots, casting, buy aluminum",
+//       alternates: {
+//         canonical: `${BASE_URL}/en/contacts`,
+//         languages: {
+//           "uk-UA": `${BASE_URL}/ua/contacts`,
+//           "en-US": `${BASE_URL}/en/contacts`,
+//         },
+//       },
+//       openGraph: {
+//         title: "Alefmet Contacts",
+//         description:
+//           "Get in touch with Alefmet — a reliable manufacturer and supplier of aluminum alloys.",
+//         url: `${BASE_URL}/en/contacts`,
+//         siteName: "Alefmet",
+//         locale: "en_US",
+//         type: "website",
+//         images: [
+//           {
+//             url: "/og-image.jpg",
+//             width: 1200,
+//             height: 630,
+//             alt: "Alefmet aluminum supplier",
+//           },
+//         ],
+//       },
+//       icons: [{ url: "/fav.png", type: "image/png" }],
+//     };
+//   }
+
+//   // 🇺🇦 Українська версія
+//   return {
+//     title: "Контакти | Алефмет — Виробництво та продаж алюмінію",
+//     description:
+//       "Зв’яжіться з ТОВ «Алефмет» — постачальником алюмінієвих сплавів в Україні. Телефонуйте або пишіть, щоб отримати комерційну пропозицію на чушки, гранули або лиття.",
+//     keywords:
+//       "контакти Алефмет, постачальник алюмінію, алюмінієві сплави, гранули, чушки, лиття, купити алюміній, Україна",
+//     alternates: {
+//       canonical: `${BASE_URL}/ua/contacts`,
+//       languages: {
+//         "uk-UA": `${BASE_URL}/ua/contacts`,
+//         "en-US": `${BASE_URL}/en/contacts`,
+//       },
+//     },
+//     openGraph: {
+//       title: "Контакти Алефмет",
+//       description:
+//         "Надійний виробник і постачальник алюмінієвих сплавів. Дзвоніть або пишіть — ми поруч.",
+//       url: `${BASE_URL}/ua/contacts`,
+//       siteName: "Alefmet",
+//       locale: "uk_UA",
+//       type: "website",
+//       images: [
+//         {
+//           url: "/og-image.jpg",
+//           width: 1200,
+//           height: 630,
+//           alt: "Alefmet — контакти постачальника алюмінію",
+//         },
+//       ],
+//     },
+//     icons: [{ url: "/fav.png", type: "image/png" }],
+//   };
+// }
+
 const Map = dynamic(() => import("../../../components/Map/Map"), {
-  ssr: false, 
+  ssr: false,
 });
 
 const Contacts = () => {
-  const t = useTranslations("contact"); 
-  
+  const t = useTranslations("contact");
+
   return (
     <div className={styles.contacts_container}>
       <Container>
@@ -63,8 +143,8 @@ const Contacts = () => {
               <Image
                 src={address}
                 alt="address"
-                width={80}
-                height={90}
+                width={100}
+                height={100}
                 className={styles.address}
               />
               <p className={styles.item_title}>{t("address_title")}</p>
@@ -102,10 +182,9 @@ const Contacts = () => {
       </Container>
       <div className={styles.map} id="map">
         <Map />
-
       </div>
     </div>
   );
-}
+};
 
 export default Contacts;

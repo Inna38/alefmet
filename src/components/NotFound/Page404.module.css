@@ -1,5 +1,5 @@
 .page {
-  background-image: url('/images/page404.png');
+  background-image: url("/images/page404.png");
   background-repeat: no-repeat;
   background-position: top;
   min-height: 750px;

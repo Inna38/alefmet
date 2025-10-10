@@ -14,10 +14,8 @@ function Button({ text, href = "", className, size = "Small" }: ButtonProps) {
       // rel="noopener noreferrer"
       className={`${styles.button} ${sizeClass} ${className || ""}`}
     >
-      {/* <button disabled={disabled} className={`${styles.button} ${sizeClass}`}> */}
       {text.toUpperCase()}
       <Image src={arrow} alt="arrow" width={44} height={24} />
-      {/* </button> */}
     </a>
   );
 }
