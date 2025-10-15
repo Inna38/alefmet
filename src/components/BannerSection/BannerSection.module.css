@@ -1,3 +1,39 @@
+.herobanner {
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+  overflow: hidden;
+}
+
+.sloganbox {
+  position: absolute;
+  /* left: 15%;  */
+  bottom: 10%;
+  margin-left: 10px;
+  margin-right: 24px;
+  padding: 15px 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.mainslogan {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent-color);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.subslogan {
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #f0f0f0;
+  margin-top: 5px;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
 .banner_container {
   width: 100%;
   height: 800px;
@@ -91,6 +127,16 @@
   }
 }
 
+@media (max-width: 795px) {
+  .mainslogan {
+    font-size: 1.8em;
+  }
+
+  .subslogan {
+    font-size: 1.2em;
+  }
+}
+
 @media (max-width: 764px) {
   .banner_container {
     background-position: 80% 55%;
@@ -102,9 +148,29 @@
   }
 }
 
+@media (max-width: 726px) {
+  .mainslogan {
+    font-size: 1.4em;
+  }
+
+  .subslogan {
+    font-size: 1.2em;
+  }
+}
+
 @media (max-width: 620px) {
   .banner_title {
     width: 600px;
+  }
+}
+
+@media (max-width: 583px) {
+  .mainslogan {
+    font-size: 1.2em;
+  }
+
+  .subslogan {
+    font-size: 1em;
   }
 }
 
@@ -119,8 +185,17 @@
   }
 }
 
+@media (max-width: 515px) {
+  .sloganbox {
+    width: min-content;
+  }
+}
+
 @media (max-width: 380px) {
   .banner_container {
     top: -180px;
+  }
+  .sloganbox {
+    bottom: 8%;
   }
 }
