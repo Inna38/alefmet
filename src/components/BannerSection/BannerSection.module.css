@@ -17,7 +17,7 @@
 }
 
 .mainslogan {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 700;
   margin: 0;
   color: var(--accent-color);
@@ -125,6 +125,9 @@
   .banner_title {
     top: 280px;
   }
+  .mainslogan {
+  font-size: 2.0em;
+}
 }
 
 @media (max-width: 795px) {
@@ -165,8 +168,11 @@
 }
 
 @media (max-width: 583px) {
+  .sloganbox {
+    width: min-content;
+  }
   .mainslogan {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .subslogan {
@@ -185,17 +191,14 @@
   }
 }
 
-@media (max-width: 515px) {
-  .sloganbox {
-    width: min-content;
-  }
-}
-
 @media (max-width: 380px) {
   .banner_container {
     top: -180px;
   }
   .sloganbox {
     bottom: 8%;
+  }
+  .mainslogan {
+    font-size: 1.2em;
   }
 }
